@@ -2,6 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 import {useState} from 'react'
 import Home from './Home.js'
+import MusicPage from './MusicPage.js'
+import DevPage from './DevPage.js'
+import Header from './Header.js'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
 
@@ -10,7 +19,14 @@ function App() {
 
   return (
     <div className="app">
-    {page === 'home' && <Home setPage={setPage}/>}
+      <div className="header">
+        {<Header setPage={setPage} />}
+      </div>
+      <div className='content'>
+        {page === 'home' && <Home setPage={setPage}/>}
+        {page === 'music' && <MusicPage />}
+        {page === 'dev' && <DevPage />}
+      </div>
     </div>
   );
 }

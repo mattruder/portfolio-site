@@ -1,21 +1,17 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import MusicCard from './MusicCard.js'
+import DevCard from './DevCard.js'
 
-export default function Home() {
+
+export default function Home({setPage}) {
     return (
         <div className="home">
         <h1>This is Home</h1>
-        <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Music</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+        <div className="cards">
+        {<MusicCard setPage={setPage}/>}
+        {<DevCard setPage={setPage}/>}
+        </div>
     
         </div>
     )
