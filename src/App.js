@@ -5,6 +5,7 @@ import Home from './Home.js'
 import MusicPage from './MusicPage.js'
 import DevPage from './DevPage.js'
 import Header from './Header.js'
+import ContactForm from './ContactForm.js'
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,6 +27,7 @@ function App() {
         {page === 'home' && <Home setPage={setPage}/>}
         {page === 'music' && <MusicPage />}
         {page === 'dev' && <DevPage />}
+        {page === 'contact' && <ContactForm />}
       </div>
     </div>
   );
