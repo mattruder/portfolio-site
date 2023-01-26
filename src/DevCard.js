@@ -10,7 +10,7 @@ export default function DevCard({setPage}) {
       <Card.Body>
         <Card.Title>Development</Card.Title>
         <Card.Text>
-          I am a developer looking to land a job! 
+          I am a recently graduated frontend developer looking to land a job! Hire me.
         </Card.Text>
         <Link to='/dev'>
             <Button variant="primary" onClick={() => setPage('dev')}>More Info</Button>
