@@ -1,11 +1,32 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Image from "react-bootstrap/Image";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container'
 import {Link} from 'react-router-dom'
 
+
+
 export default function MusicCard({setPage}) {
+
+  const styles = {
+    card: {
+      backgroundColor: '#B7E0F2',
+      borderRadius: 55,
+      padding: '3rem'
+    },
+    cardImage: {
+      objectFit: 'cover',
+      borderRadius: 55
+    }
+  }
+
     return (
+      <div>
+       
         <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Image fluid variant="top" src={require("./images/music-pic.png")} />
       <Card.Body>
         <Card.Title>Music</Card.Title>
         <Card.Text>
@@ -17,5 +38,8 @@ export default function MusicCard({setPage}) {
         
       </Card.Body>
     </Card>
+   
+   
+    </div>
     )
 }

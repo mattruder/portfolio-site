@@ -1,11 +1,12 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import {Link} from 'react-router-dom'
+import Image from "react-bootstrap/Image";
 
 export default function DevCard({setPage}) {
     return (
         <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Image variant="top" fluid src={require("./images/dev-pic.png")} />
       <Card.Body>
         <Card.Title>Development</Card.Title>
         <Card.Text>

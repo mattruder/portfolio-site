@@ -41,6 +41,8 @@ export default function ContactForm() {
       };
 
   return (
+    <div>
+        <h3>For all inquiries, please send me a message via the form below.</h3>
     <Form>
             <Form.Group as={Col} controlId="formGridName">
                 <Form.Label>Name*</Form.Label>
@@ -65,5 +67,6 @@ export default function ContactForm() {
                 Submit
                 </Button>
         </Form >
+        </div>
   );
 }
