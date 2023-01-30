@@ -2,12 +2,17 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
+import './ExtraStyles.css'
 
 export default function MusicPage() {
+
+   
 
     const styles = {
         padding: '5px'
     }
+
+  
 
     const rowStylesTop = {
         paddingLeft: '5px',
@@ -23,12 +28,12 @@ export default function MusicPage() {
     }
 
     return (
-        <div className="music-page ">
-            <div className="d-flex justify-content-center align-items-center">
+        <div className="music-page scroll nobackground ">
+            <div className="d-flex justify-content-center align-items-center transparentBG">
             <h1>Music</h1>
             </div>
-            <div style={styles} className="music-services-container d-flex justify-content-center align-items-center">
-                <ListGroup horizontal>
+            <div style={styles} className="music-services-container d-flex flex-wrap justify-content-center align-items-center ">
+                <ListGroup horizontal fluid className="music-services-container d-flex flex-wrap justify-content-center align-items-center transparentBG ">
                 <ListGroup.Item>Film Scores</ListGroup.Item>
                 <ListGroup.Item>Live Performances</ListGroup.Item>
                 <ListGroup.Item>Tours</ListGroup.Item>
@@ -86,18 +91,20 @@ export default function MusicPage() {
                             </iframe>
                         </Col>
                     </Row> 
-                </Container>
-            </div>
-            <div className="music-page-spotify">
+                    <Row style={styles}><Col className="d-flex justify-content-center align-items-center" style={styles}>
                 <iframe 
                     src="https://open.spotify.com/embed/playlist/5lwyFw7PRQKYmYgKRwQiV7?utm_source=generator&theme=0" 
-                    width="100%" 
+                    width="90%" 
                     height="380" 
                     allowFullScreen="" 
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                     loading="lazy">
                 </iframe>
+            </Col></Row>
+                    
+                </Container>
             </div>
+            
             
         </div>
     )

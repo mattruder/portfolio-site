@@ -4,8 +4,8 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import Navbar from 'react-bootstrap/Navbar'
-import { hover } from '@testing-library/user-event/dist/hover';
 
+import './ExtraStyles.css'
 
 export default function Header({setPage}) {
     
@@ -13,6 +13,9 @@ export default function Header({setPage}) {
         cursor: "pointer",
         a: {
           textDecoration: "none"
+        },
+        ahover: {
+          cursor: "pointer"
         }
     }
 
@@ -29,8 +32,8 @@ export default function Header({setPage}) {
         <div className="header">
 <Navbar style={sticky} bg="dark" variant="dark">
       <Container>
-        <Link to="/" className="text-decoration-none">
-        <Navbar.Brand style={styles} onClick={() => {setPage('home')}}>Matt Ruder</Navbar.Brand>
+        <Link  to="/" className="text-decoration-none cursor-pointer">
+        <Navbar.Brand className="cursor-pointer"  onClick={() => {setPage('home')}}>Matt Ruder</Navbar.Brand>
         </Link>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">

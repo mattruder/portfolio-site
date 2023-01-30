@@ -1,5 +1,6 @@
 import { Form, Col, Button } from 'react-bootstrap';
 import { useState } from 'react'
+import './ExtraStyles.css'
 
 const initialFormData = Object.freeze({
     username: "",
@@ -52,7 +53,7 @@ export default function ContactForm({setPage}) {
       };
 
   return (
-    <div>
+    <div className='transparentBG'>
         <div style={formStyles} className="d-flex align-items-center justify-content-center">
         <h3>For all inquiries, please send me a message via the form below.</h3>
         </div>

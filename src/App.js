@@ -13,10 +13,20 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import background from "./images/trees-background.png"
+import './ExtraStyles.css'
 
 function App() {
 
+  const appStyles = {
+    backgroundImage: `url(${background})`,
+    backgroundRepeat: 'repeat',
+    backgroundAttachment: 'fixed',
+    
+  }
+
   const [page, setPage] = useState('home')
+
 
   if (page) {
     window.scrollTo(0, 0)
@@ -32,7 +42,7 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className="app scroll transparentBG" style={appStyles}>
       <div style={navStyles} className="header">
         {<Header setPage={setPage} />}
       </div>

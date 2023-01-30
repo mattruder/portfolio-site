@@ -1,0 +1,35 @@
+background-image {
+    opacity: 0.5
+}
+
+.scroll {
+  
+    
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+ 
+  }
+
+  .nobackground {
+    background-image: none;
+    background-color: transparent;
+    background: none;
+  }
+
+  .whiteText {
+    color: white;
+    box-shadow: black;
+  }
+
+  .transparentBG {
+    background-color: rgba(255,255,255,0.9);
+  }
+
+ .lightpadding {
+    padding: 5px;
+ }
+
+ .lilborder {
+    border-radius: 5px;
+ }

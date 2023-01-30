@@ -11,19 +11,19 @@ export default function Home({setPage}) {
 
     const styles={
       
-      
+      padding: '5px'
     }
 
     
 
     return (
-        <div style={styles} >
+        <div >
         
-        <div style={styles} className="cards d-flex justify-content-center align-items-center">
+        <div  className="cards d-flex justify-content-center align-items-center">
         <Container >
-      <Row className="d-flex justify-content-center align-items-center">
-        <Col className="d-flex justify-content-center align-items-center" >{<MusicCard setPage={setPage}/>}</Col>
-        <Col className="d-flex justify-content-center align-items-center">{<DevCard setPage={setPage}/>}</Col>
+      <Row style={styles} className="d-flex flex-wrap justify-content-center align-items-center">
+        <Col style={styles} className="d-flex justify-content-center align-items-center" >{<MusicCard setPage={setPage}/>}</Col>
+        <Col style={styles} className="d-flex justify-content-center align-items-center">{<DevCard setPage={setPage}/>}</Col>
       </Row>
 
     </Container>
