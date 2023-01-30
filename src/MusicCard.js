@@ -25,7 +25,7 @@ export default function MusicCard({setPage}) {
     return (
       <div>
        
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '30rem' }}>
       <Image fluid variant="top" src={require("./images/music-pic.png")} />
       <Card.Body>
         <Card.Title>Music</Card.Title>

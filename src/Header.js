@@ -4,23 +4,41 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import Navbar from 'react-bootstrap/Navbar'
+import { hover } from '@testing-library/user-event/dist/hover';
+
 
 export default function Header({setPage}) {
     
     const styles = {
-        cursor: "pointer"
+        cursor: "pointer",
+        a: {
+          textDecoration: "none"
+        }
+    }
+
+    const sticky={
+      position: 'fixed',
+      top: "0",
+      width: "100%",
+      zIndex: "100",
+      paddingBottom: "5px",
+      padding: "10px"
     }
 
     return (
         <div className="header">
-<Navbar bg="dark" variant="dark">
+<Navbar style={sticky} bg="dark" variant="dark">
       <Container>
+        <Link to="/" className="text-decoration-none">
         <Navbar.Brand style={styles} onClick={() => {setPage('home')}}>Matt Ruder</Navbar.Brand>
+        </Link>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
+          <Link to="/contact" className="text-decoration-none">
           <Navbar.Text style={styles} onClick={() => {setPage('contact')}}>
             Contact
           </Navbar.Text>
+          </Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

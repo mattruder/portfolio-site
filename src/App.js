@@ -18,13 +18,25 @@ function App() {
 
   const [page, setPage] = useState('home')
 
+  if (page) {
+    window.scrollTo(0, 0)
+  }
+
+  const contentStyles = {
+    height: "90vh",
+    
+  }
+
+  const navStyles= {
+    height: "10vh"
+  }
 
   return (
     <div className="app">
-      <div className="header">
+      <div style={navStyles} className="header">
         {<Header setPage={setPage} />}
       </div>
-      <div className='content'>
+      <div style={contentStyles} className='content'>
         {page === 'home' && <Home setPage={setPage}/>}
         {page === 'music' && <MusicPage />}
         {page === 'dev' && <DevPage />}

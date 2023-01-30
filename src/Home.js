@@ -9,20 +9,21 @@ import Container from 'react-bootstrap/Container'
 
 export default function Home({setPage}) {
 
-    const styles = {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
+    const styles={
+      
+      
     }
 
+    
+
     return (
-        <div className="home">
+        <div style={styles} >
         
-        <div className="cards">
+        <div style={styles} className="cards d-flex justify-content-center align-items-center">
         <Container >
-      <Row >
-        <Col style={styles}>{<MusicCard setPage={setPage}/>}</Col>
-        <Col style={styles}>{<DevCard setPage={setPage}/>}</Col>
+      <Row className="d-flex justify-content-center align-items-center">
+        <Col className="d-flex justify-content-center align-items-center" >{<MusicCard setPage={setPage}/>}</Col>
+        <Col className="d-flex justify-content-center align-items-center">{<DevCard setPage={setPage}/>}</Col>
       </Row>
 
     </Container>

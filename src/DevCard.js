@@ -5,7 +5,7 @@ import Image from "react-bootstrap/Image";
 
 export default function DevCard({setPage}) {
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '30rem' }}>
       <Image variant="top" fluid src={require("./images/dev-pic.png")} />
       <Card.Body>
         <Card.Title>Development</Card.Title>
