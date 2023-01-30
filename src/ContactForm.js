@@ -8,9 +8,13 @@ const initialFormData = Object.freeze({
     query: ""
   });
 
-export default function ContactForm() {
+export default function ContactForm({setPage}) {
 
     const [formData, updateFormData] = useState(initialFormData);
+
+    const formStyles = {
+        padding: '10px'
+    }
 
     const sendFeedback = (serviceID, templateId, variables) => {
         window.emailjs.send(
@@ -32,40 +36,50 @@ export default function ContactForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        alert(`Thank you for your message. Your query has been forwarded.`);
+        
         const templateId = 'template_czrlb1i';
         const serviceID = "service_w8tlljd";
-        sendFeedback(serviceID, templateId, { from_name: formData.name, mobile: formData.mobile, message: formData.query, email: formData.email })
+        if (formData.name && formData.mobile && formData.email && formData.query) {
+            sendFeedback(serviceID, templateId, { from_name: formData.name, mobile: formData.mobile, message: formData.query, email: formData.email })
+            alert(`Thank you for your message. Your query has been forwarded.`);
+            setPage('home')
+        } else {
+            alert(`Please complete all fields`);
+        }
+        
 
         console.log(formData);
       };
 
   return (
     <div>
+        <div style={formStyles} className="d-flex align-items-center justify-content-center">
         <h3>For all inquiries, please send me a message via the form below.</h3>
-    <Form>
-            <Form.Group as={Col} controlId="formGridName">
+        </div>
+    <Form style={formStyles}>
+            <Form.Group hasValidation as={Col} controlId="formGridName">
                 <Form.Label>Name*</Form.Label>
-                <Form.Control onChange= {handleChange} name="name" type="name" placeholder="Name" />
+                <Form.Control required onChange= {handleChange} name="name" type="name" placeholder="Name" />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridEmail">
                 <Form.Label>Email*</Form.Label>
-                <Form.Control onChange= {handleChange} name="email" type="email" placeholder="Enter email"
+                <Form.Control required onChange= {handleChange} name="email" type="email" placeholder="Enter email"
                 />
             </Form.Group>
             <Form.Group as={Col} controlId="formGridMobile">
                 <Form.Label>Mobile no.*</Form.Label>
-                <Form.Control onChange= {handleChange} name="mobile" placeholder="" />
+                <Form.Control required onChange= {handleChange} name="mobile" placeholder="Phone" />
             </Form.Group>
             <Form.Group as={Col} id="formGridQuery">
                 <Form.Label>Query*</Form.Label>
-                <Form.Control onChange= {handleChange} name="query" as="textarea" rows={3} />
+                <Form.Control required onChange= {handleChange} name="query" as="textarea" rows={8} />
             </Form.Group>
-
+    <div style={formStyles} className="d-flex align-items-center justify-content-center">
             <Button onClick={handleSubmit} variant="primary" type="submit">
                 Submit
                 </Button>
+                </div>
         </Form >
         </div>
   );

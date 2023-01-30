@@ -40,7 +40,7 @@ function App() {
         {page === 'home' && <Home setPage={setPage}/>}
         {page === 'music' && <MusicPage />}
         {page === 'dev' && <DevPage />}
-        {page === 'contact' && <ContactForm />}
+        {page === 'contact' && <ContactForm setPage={setPage}/>}
       </div>
     </div>
   );
