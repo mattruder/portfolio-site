@@ -43,8 +43,9 @@ function App() {
   }
 
   const extraSpace = {
-    bottom: '20px',
-    position: 'fixed'
+    height: '10vh',
+    
+    bottom: 'offset'
   }
 
   return (
@@ -58,7 +59,7 @@ function App() {
         {page === 'dev' && <DevPage />}
         {page === 'contact' && <ContactForm setPage={setPage}/>}
       </div>
-      <div style={extraSpace}></div>
+     <div style={extraSpace}></div>
     </div>
   );
 }
