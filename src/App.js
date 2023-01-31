@@ -22,7 +22,7 @@ function App() {
     backgroundImage: `url(${background})`,
     backgroundRepeat: 'repeat',
     backgroundAttachment: 'fixed',
-    paddingBottom: '10px'
+   
     
   }
 
@@ -34,7 +34,7 @@ function App() {
   }
 
   const contentStyles = {
-    height: "90vh",
+    height: "80vh"
     
   }
 
@@ -42,17 +42,22 @@ function App() {
     height: "10vh"
   }
 
+  const extraSpace = {
+    height: "10vh"
+  }
+
   return (
-    <div className="app scroll transparentBG" style={appStyles}>
+    <div className="appy scroll transparentBG removeExtraSpaceAtBottom" style={appStyles}>
       <div style={navStyles} className="header">
         {<Header setPage={setPage} />}
       </div>
-      <div style={contentStyles} className='content'>
+      <div style={contentStyles} className='content align-items-center justify-content-center removeExtraSpaceAtBottom'>
         {page === 'home' && <Home setPage={setPage}/>}
         {page === 'music' && <MusicPage />}
         {page === 'dev' && <DevPage />}
         {page === 'contact' && <ContactForm setPage={setPage}/>}
       </div>
+      <div style={extraSpace}></div>
     </div>
   );
 }

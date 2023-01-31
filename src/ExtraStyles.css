@@ -6,7 +6,7 @@ background-image {
   
     
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
     text-align: justify;
  
   }
@@ -40,3 +40,4 @@ background-image {
   border-radius: 5px;
   padding: 5px;
  }
+
