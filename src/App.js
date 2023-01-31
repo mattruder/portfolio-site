@@ -22,6 +22,7 @@ function App() {
     backgroundImage: `url(${background})`,
     backgroundRepeat: 'repeat',
     backgroundAttachment: 'fixed',
+    paddingBottom: '10px'
     
   }
 
