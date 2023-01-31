@@ -37,8 +37,8 @@ export default function Header({setPage}) {
         </Link>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-          <Link to="/contact" className="text-decoration-none">
-          <Navbar.Text style={styles} onClick={() => {setPage('contact')}}>
+          <Link to="/contact" className="text-decoration-none contactButton">
+          <Navbar.Text className="contactButton" style={styles} onClick={() => {setPage('contact')}}>
             Contact
           </Navbar.Text>
           </Link>

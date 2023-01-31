@@ -33,3 +33,10 @@ background-image {
  .lilborder {
     border-radius: 5px;
  }
+
+ .contactButton {
+  background-color: lightgray;
+  color: black;
+  border-radius: 5px;
+  padding: 5px;
+ }
