@@ -43,7 +43,8 @@ function App() {
   }
 
   const extraSpace = {
-    height: "10vh"
+    bottom: '20px',
+    position: 'fixed'
   }
 
   return (
