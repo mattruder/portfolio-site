@@ -24,7 +24,7 @@ function App() {
     backgroundRepeat: 'repeat',
     backgroundAttachment: 'fixed',
     backgroundSize: '100%',
-    height: '100vh'
+    
     
   }
 
@@ -47,21 +47,21 @@ function App() {
 
   const extraSpace = {
     
-    margin: 'auto'
+  
   }
 
   return (
-    <div className="appy scroll transparentBG " style={appStyles}>
+    <div className="appy scroll transparentBG page-container" style={appStyles}>
       <div style={navStyles} className="header">
         {<Header setPage={setPage} />}
       </div>
-      <div style={contentStyles} className='content align-items-center justify-content-center '>
+      <div style={contentStyles} className='content align-items-center justify-content-center content-wrap'>
         {page === 'home' && <Home setPage={setPage}/>}
         {page === 'music' && <MusicPage />}
         {page === 'dev' && <DevPage />}
         {page === 'contact' && <ContactForm setPage={setPage}/>}
       </div>
-     <div style={extraSpace}>{<Footer />}</div>
+     <div className="footer" style={extraSpace}>{<Footer />}</div>
     </div>
   );
 }

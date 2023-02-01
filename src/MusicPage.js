@@ -28,7 +28,7 @@ export default function MusicPage() {
     }
 
     return (
-        <div className="music-page scroll nobackground cardPaddingBtm">
+        <div className="music-page scroll nobackground ">
             <div className="d-flex justify-content-center align-items-center transparentBG">
             <h1>Music</h1>
             </div>

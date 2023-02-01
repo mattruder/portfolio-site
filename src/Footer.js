@@ -11,16 +11,16 @@ export default function Footer() {
     
 
     const sticky={
-      position: 'fixed',
+      position: "absolute",
       bottom: "0",
       width: "100%",
-      zIndex: "100",
+      zIndex: "0",
       
  
     }
 
     return (
-        <div className="footer">
+        <div>
 <Navbar style={sticky} bg="dark" variant="dark">
       <Container>
         

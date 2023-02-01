@@ -53,7 +53,7 @@ export default function ContactForm({setPage}) {
       };
 
   return (
-    <div className='transparentBG cardPaddingBtm'>
+    <div className='transparentBG '>
         <div style={formStyles} className="d-flex align-items-center justify-content-center">
         <h3>For all inquiries, please send me a message via the form below.</h3>
         </div>

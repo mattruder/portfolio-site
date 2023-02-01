@@ -11,7 +11,7 @@ export default function DevPage() {
     }
 
     return (
-        <div style={devStyles} className="developer-page d-flex flex-column align-items-center cardPaddingBtm"> 
+        <div style={devStyles} className="developer-page d-flex flex-column align-items-center "> 
             <h1 className="transparentBG lilborder">Developer Services</h1>
             <div style={devStyles} className="languages d-flex flex-wrap justify-content-center align-items-center">
                 
