@@ -1,5 +1,6 @@
 background-image {
-    opacity: 0.5
+    opacity: 0.5;
+    height: 100vh
 }
 
 .scroll {
@@ -8,7 +9,7 @@ background-image {
     overflow-x: hidden;
     overflow-y: scroll;
     text-align: justify;
- 
+    position: relative
   }
 
   .nobackground {
@@ -41,3 +42,15 @@ background-image {
   padding: 5px;
  }
 
+ .footerText {
+  color: white;
+ }
+
+ .cardPaddingBtm {
+  margin-bottom: 15vh;
+  
+ }
+
+ .cardPaddingTop {
+  margin-top: 5vh
+ }

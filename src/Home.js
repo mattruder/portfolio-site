@@ -19,7 +19,7 @@ export default function Home({setPage}) {
     return (
         <div >
         
-        <div  className="cards d-flex justify-content-center align-items-center">
+        <div  className="cards d-flex justify-content-center align-items-center cardPaddingBtm cardPaddingTop">
         <Container >
       <Row style={styles} className="d-flex flex-wrap justify-content-center align-items-center">
         <Col style={styles} className="d-flex justify-content-center align-items-center" >{<MusicCard setPage={setPage}/>}</Col>

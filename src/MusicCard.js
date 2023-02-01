@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container'
 import {Link} from 'react-router-dom'
+import './ExtraStyles.css'
 
 
 
@@ -25,7 +26,7 @@ export default function MusicCard({setPage}) {
     return (
  
        
-        <Card style={{ width: '30rem' }}>
+        <Card  style={{ width: '30rem' }}>
       <Image fluid variant="top" src={require("./images/music-pic.png")} />
       <Card.Body>
         <Card.Title>Music</Card.Title>
